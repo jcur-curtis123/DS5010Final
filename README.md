@@ -11,9 +11,9 @@ pip install -r requirements.txt
 
 This .txt file includes:
 
-pandas
-numpy
-matplotlib
+pandas,
+numpy,
+matplotlib,
 scipy
 
 
@@ -50,9 +50,18 @@ def load(self, path, store):
             county.fmr = float(row["FMR_2BR"])
 ```
 
+```python
+def get(self, name):
+
+        clean = name.replace(" County", "").strip()
+        if clean not in self.counties:
+            self.counties[clean] = CountyData(clean)
+        return self.counties[clean]
+```
+
 County is stored as a CountyData object and it's self.fmr is set to FMR_2BR, where FMR_2BR is a standard in affordability analysis. 
 
-Each loader is programmed in this format, where each column is addressed to it's corresponding csv. 
+Each loader is formatted this way, where each row is addressed to it's corresponding csv. 
 
 During the development of this project, I understood that I would need to standardize or normalize the dataset during matrix construction and the development of features. Much of feature matrices were that of the numerical portions of the county data, as mentioned prior. 
 
@@ -100,7 +109,7 @@ Knox County is the county that satisfies this question. With relative high fmr, 
 
 This project blended my passion for housing and real estate and served as a testament to my data science skills. 
 
-This is the first time utilizing a variety of python packages including, numpy, scipy, matplotlib and pandas in a singular project. 
+This is the first time blending a variety of python packages including, numpy, scipy, matplotlib and pandas in a singular project. 
 
 If I were to complete this project over again, I would start with an end in mind. When it comes to building this dendrogram, I was consistently adding more datasets to see if the clusters would change or shift. This became time consuming, and I am unsure if this method of discovery is worth utilizing an extended number of resources. 
 
