@@ -16,6 +16,11 @@ numpy,
 matplotlib,
 scipy
 
+This is required in order to compile correctly. 
+
+*Note - if pip does not work, try pip3 install -r requirements.txt.
+
+You may see your version of pip via pip3 -v. 
 
 # Object Oriented Method
 
@@ -50,6 +55,8 @@ def load(self, path, store):
             county.fmr = float(row["FMR_2BR"])
 ```
 
+An example of get() from dataloader.py
+
 ```python
 def get(self, name):
 
@@ -61,7 +68,7 @@ def get(self, name):
 
 County is stored as a CountyData object and it's self.fmr is set to FMR_2BR, where FMR_2BR is a standard in affordability analysis. 
 
-Each loader is formatted this way, where each row is addressed to it's corresponding csv. 
+Each loader is formatted this way, where each row is read and cleaned with it's corresponding csv in config.py, where paths for each csv exist.
 
 During the development of this project, I understood that I would need to standardize or normalize the dataset during matrix construction and the development of features. Much of feature matrices were that of the numerical portions of the county data, as mentioned prior. 
 
