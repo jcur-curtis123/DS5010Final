@@ -111,8 +111,6 @@ Normalized data points:
 
 ---
 
-### Step 1 — Compute all pairwise distances
-
 We compute the Euclidean distance \(D(p,q)\) for all  
 \(p \in A\), \(q \in B\).
 
@@ -168,9 +166,6 @@ The average linkage distance between clusters A and B is:
 $$
 {D_{\text{avg}}(A,B) = 2.121}
 $$
-
-
-
 
 # Results
 
