@@ -1,11 +1,13 @@
 # Introduction
-The goal for this project is to identify counties that are close in similarity given data regarding Fair Market Rent and Income metrics. Identifying counties with low FMR or High FMR may explain housing affordability at a county comparison approach.This approach utilizes concepts of unsupervised machine learning - specifically that of hierarchical clustering. 
+The goal for this project is to identify counties that are close in similarity given data regarding Fair Market Rent and Income metrics. Identifying counties with low FMR or high FMR may explain housing affordability at a county comparison approach. 
 
-Please see the work cited portion of this README for data sources. 
+This approach utilizes concepts of unsupervised machine learning - specifically that of hierarchical clustering. 
 
 In essence, I attempt to answer the question, "Where are renters most cost-burdened relative to local incomes, and with this, how do regional housing markets cluster by affordability conditions?"
 
-Also, in what ways can decision makers view High FMR counties and that of low FMR counties, in respect to the dendrogram? 
+Also, in what ways can decision makers view and propose changes on high FMR counties with respect to that of low FMR counties, given the output of the hierarchical clustering algorithm - the dendrogram. 
+
+Please see the work cited portion of this README for data sources. 
 
 Please run requirements.txt via 
 
@@ -18,9 +20,9 @@ numpy,
 matplotlib,
 scipy
 
-This is required in order to compile correctly. 
+This is required in order for main.py to compile correctly. 
 
-*Note - if pip does not work, try pip3 install -r requirements.txt.
+*Note* If pip does not work, try pip3 install -r requirements.txt.
 
 You may see your version of pip via pip3 -v. 
 
@@ -76,7 +78,6 @@ During the development of this project, I understood that I would need to standa
 For example, the FMR, Average Weekly Income, and Median Household Income is among the numerical features required. 
 
 The formula: (X-Mean)/sigma is an approach at standardizing each X value in the feature matrix.
-
 
 # Cluster Analysis
 
