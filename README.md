@@ -194,7 +194,7 @@ This is the first time blending a variety of python packages including, numpy, s
 
 If I were to complete this project over again, I would start with an end in mind. When it comes to building this dendrogram, I was consistently adding more datasets to see if the clusters would change or shift. This became time consuming, and I am unsure if this method of discovery is worth utilizing an extended number of resources. 
 
-If I were to repeat this project, I would also consider population, and distance to nearest neccessary services. This includes, hospitals, grocery stores, and municipal buildings. These factors may contribute to a low or high population, thus increasing the cost burden in counties. 
+ I would also consider population, and distance to nearest neccessary services. This includes hospitals, grocery stores, and municipal buildings. These factors may contribute to a low or high population in a given county, thus, affecting the affordabiltiy in the given county. 
 
 # Work Cited
 
