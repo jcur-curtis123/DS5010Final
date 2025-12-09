@@ -1,9 +1,11 @@
 # Introduction
-The goal for this project is to identify counties that are close in similarity within socioeconomic statuses. This approach utilizes concepts of unsupervised machine learning - specifically that of hierarchical clustering. I consider Fair Market Rent (FMR), Average Weekly Wage, and Median Household Income. Please see the work cited portion of this README for data sources. 
+The goal for this project is to identify counties that are close in similarity given data regarding Fair Market Rent and Income metrics. Identifying counties with low FMR or High FMR may explain housing affordability at a county comparison approach.This approach utilizes concepts of unsupervised machine learning - specifically that of hierarchical clustering. 
 
-In essence I attempt to answer the question, "Where are renters most cost-burdened relative to local incomes, and with this, how do regional housing markets cluster by affordability conditions?"
+Please see the work cited portion of this README for data sources. 
 
-By local and regional this translates to a county-by-county approach. 
+In essence, I attempt to answer the question, "Where are renters most cost-burdened relative to local incomes, and with this, how do regional housing markets cluster by affordability conditions?"
+
+Also, in what ways can decision makers view High FMR counties and that of low FMR counties, in respect to the dendrogram? 
 
 Please run requirements.txt via 
 
