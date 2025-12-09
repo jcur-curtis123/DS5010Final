@@ -40,7 +40,6 @@ Pipeline takes the model and logic from plotter and plots the dendrogram given t
 
 A diagram representing how this Factory Method works is located in docs/DS_5010_Final.png
 
-
 # Data Preparation 
 
 As mentioned prior, the individual loaders "load" each csv accordingly. Below is an example of how the loader will load the csv. 
@@ -95,6 +94,83 @@ D_{\text{avg}}(A,B)
 \sum_{p \in A} \sum_{q \in B} D(p,q)
 $$
 
+Using this distance formula, each pairwise distance is calculated for each cluster within A and B. 
+
+A representation of the distance calculation is:
+
+Cluster A: \(A = \{x_1, x_2\}\)
+Cluster B: \(B = \{x_3\}\)
+
+Normalized data points:
+
+| Point | Vector      |
+|-------|-------------|
+| \(x_1\) | (1.0, 2.0) |
+| \(x_2\) | (2.0, 3.0) |
+| \(x_3\) | (0.0, 1.0) |
+
+---
+
+### Step 1 — Compute all pairwise distances
+
+We compute the Euclidean distance \(D(p,q)\) for all  
+\(p \in A\), \(q \in B\).
+
+**Distance 1: \(D(x_1, x_3)\)**
+
+$$
+D(x_1, x_3)
+= \sqrt{(1-0)^2 + (2-1)^2}
+= \sqrt{1 + 1}
+= \sqrt{2}
+\approx 1.414
+$$
+
+**Distance 2: \(D(x_2, x_3)\)**
+
+$$
+D(x_2, x_3)
+= \sqrt{(2-0)^2 + (3-1)^2}
+= \sqrt{4 + 4}
+= \sqrt{8}
+\approx 2.828
+$$
+
+Now we must compute the average distance using Linkage Average Pariwise Distance Formula
+
+
+Cluster sizes: \(|A| = 2\), \(|B| = 1\)
+
+The average linkage formula:
+
+$$
+D_{\text{avg}}(A,B)
+= \frac{1}{|A| \cdot |B|}
+  \sum_{p \in A} \sum_{q \in B} D(p,q)
+$$
+
+Plug in the distances:
+
+$$
+D_{\text{avg}}(A,B)
+= \frac{1}{2 \cdot 1}
+  \left(1.414 + 2.828\right)
+$$
+
+$$
+D_{\text{avg}}(A,B)
+= \frac{4.242}{2}
+= 2.121
+$$
+
+The average linkage distance between clusters A and B is:
+
+$$
+{D_{\text{avg}}(A,B) = 2.121}
+$$
+
+
+
 
 # Results
 
@@ -120,6 +196,8 @@ This is the first time blending a variety of python packages including, numpy, s
 
 If I were to complete this project over again, I would start with an end in mind. When it comes to building this dendrogram, I was consistently adding more datasets to see if the clusters would change or shift. This became time consuming, and I am unsure if this method of discovery is worth utilizing an extended number of resources. 
 
+If I were to repeat this project, I would also consider population, and distance to nearest neccessary services. This includes, hospitals, grocery stores, and municipal buildings. These factors may contribute to a low or high population, thus increasing the cost burden in counties. 
+
 # Work Cited
 
 Median Household Income by County
@@ -136,11 +214,15 @@ https://www.mainehousing.org/docs/default-source/asset-management/rent-income-ch
 
 Factory Method
 
-https://refactoring.guru/design-patterns/factory-method 
+https://refactoring.guru/design-patterns/factory-method
+
+Population Data
+
+https://worldpopulationreview.com/us-counties/maine 
 
 LLMs Used:
 
-During the discovery phase of this final, I utilized Claude for assistance on understanding Dendrograms. I spent ~8 hours on researching and watching content related to unsupervised machine learning and the use of dendrograms. An example of content watched was this youtube video: https://www.youtube.com/watch?v=IUn8k5zSI6g, Crash Course Statistics' video on Dendrograms.
+During the discovery phase of this final, I utilized Claude for assistance on understanding Dendrograms. I spent ~8 hours on researching and watching content related to unsupervised machine learning and the use of dendrograms. An example of content watched was this youtube video: https://www.youtube.com/watch?v=IUn8k5zSI6g, Crash Course Statistics' video on Dendrograms. This process assisted with my understanding with unsupervised machine learning, a great bridge into Unsupervised Machine Learning course. 
 
 Research also included that of the Factory Method. After gathering information from refactoring.guru, I clarified that factory method is indeed an OOP concept as well as, clarification on if such concept can work alongside the Hierarchical Clustering within Unsupervised Machine Learning.
 
