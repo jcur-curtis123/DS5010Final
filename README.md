@@ -176,7 +176,7 @@ The overall results from running the model is an output of the dendrogram. Each 
 
 Therefore counties that have the shortest distance, will result in a merge. You will see in this instance, Penobscot and Androscoggin county are clustered together, demonstrating a similarity given the proposed datasets. 
 
-Outliers in this dendrogram are pushed further away from other clusters. Also, outliers may exist on a separate level than that of other clusters. Cumberland and York counties are considered outliers.
+Outliers in this dendrogram are separated from other clusters. Also, outliers may exist as a singleton, a cluster by itself. Cumberland and York counties are considered outliers. 
 
 Why? These counties have the highest median household income, the highest average weekly net income, and FMR2BR is also the highest in these two counties. 
 
@@ -186,9 +186,15 @@ One question that arises during the implementation of the dendrogram is, "what c
 
 Knox County is the county that satisfies this question. With relative high fmr, it's average weekly wage is that of penobscot county, at 1,150.
 
+The results collected from the dendrogram prompts further questioning on how the State of Maine resovles housing affordability. This project primarily focuses on renters with FMR detailing the rent per month. 
+
+With this being said, if one municipality changes or alters legislation in their county, will this affect the county that has the lowest neighboring distance? In other words, will changes in Penobscot alter that of Knox, or even further in that of Hancock or Lincoln?
+
+What other direct or indirect changes will affect neighboring counties considering their prospective pairwise distances? 
+
 # Reflection
 
-This project blended my passion for housing and real estate and served as a testament to my data science skills. 
+This project considered my passion for housing affordability and served as a testament to my data science skills. 
 
 This is the first time blending a variety of python packages including, numpy, scipy, matplotlib and pandas in a singular project. 
 
